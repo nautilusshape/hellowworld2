@@ -5,8 +5,11 @@ import os
 from google import genai
 from google.genai import types
 
+# Replace with your proxy
+proxy = "185.173.168.31:22525"
 
-
+os.environ["HTTP_PROXY"] = proxy
+os.environ["HTTPS_PROXY"] = proxy
 api_key = "AIzaSyC0mA0f_tGLbm38LAxIcwpiwEylLTEEG3U"
 # ---------------- CONFIG ----------------
 st.set_page_config(
@@ -79,7 +82,18 @@ st.markdown(
 )
 
 # ---------------- APP TITLE ----------------
-st.title("📊 تحلیلگر اخبار اقتصادی")
+#st.title("📊 تحلیلگر اخبار اقتصادی")
+st.markdown(
+    """
+    <h1 style='font-family: "B Homa", Tahoma, sans-serif; 
+               direction: rtl; 
+               text-align: right; 
+               font-weight: normal;'>
+        📊 تحلیلگر اخبار اقتصادی
+    </h1>
+    """,
+    unsafe_allow_html=True
+)
 st.markdown("در این صفحه می‌توانید لینک یک خبر اقتصادی را وارد کنید و تحلیل آن را دریافت کنید.")
 
 # ---------------- SIDEBAR ----------------
