@@ -1,15 +1,10 @@
 import streamlit as st
 import json
 import re
-import os
 from google import genai
 from google.genai import types
 
-# Replace with your proxy
-proxy = "185.173.168.31:22525"
 
-os.environ["HTTP_PROXY"] = proxy
-os.environ["HTTPS_PROXY"] = proxy
 api_key = "AIzaSyC0mA0f_tGLbm38LAxIcwpiwEylLTEEG3U"
 # ---------------- CONFIG ----------------
 st.set_page_config(
